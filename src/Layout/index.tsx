@@ -6,6 +6,9 @@ const Layout = ({ route }: any) => {
   console.log('Layout---------route',route)
   return(
     <div>
+      <header>
+        
+      </header>
     <main>
       <Outlet />
     </main>
