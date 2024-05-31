@@ -11,18 +11,20 @@
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "antd-mobile": "^5.36.1",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.23.1",
     "react-scripts": "5.0.1",
-    "sass": "^1.77.3",
+    "sass": "^1.77.4",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -44,6 +46,10 @@
     ]
   },
   "devDependencies": {
-    "@types/react-router-dom": "^5.3.3"
+    "@craco/craco": "^7.1.0",
+    "@types/react-router-dom": "^5.3.3",
+    "postcss-loader": "^8.1.1",
+    "postcss-preset-env": "^9.5.14",
+    "postcss-px-to-viewport": "^1.1.1"
   }
 }

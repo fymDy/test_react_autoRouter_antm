@@ -1,14 +1,11 @@
-
-
-
-
 import React from 'react';
-import { Link } from 'react-router-dom';
 import AppRoutes from './routes';
+import   './index.module.scss';
+
 const App: React.FC = () => {
-  const fronUrl='/protected'
+
   return (
-    <div>
+    <div className="container">
       <AppRoutes />
     </div>
   );

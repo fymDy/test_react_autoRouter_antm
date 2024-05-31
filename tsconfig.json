@@ -20,6 +20,6 @@
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["src", "src/typings/index.d.ts"]
-
+  "include": ["src", "src/typings/index.d.ts"],
+  "exclude": ["node_modules", "dist"]
 }

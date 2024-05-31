@@ -1,0 +1,47 @@
+@import './reset';
+
+:root {
+  --primary-color: #4CAF50;
+  --secondary-color: #FF5722;
+  --font-family: 'Arial, sans-serif';
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: #f0f8ff;
+  color: #333;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* 定义自定义媒体查询 */
+@custom-media --small-viewport (max-width: 600px);
+@custom-media --medium-viewport (min-width: 601px) and (max-width: 1024px);
+@custom-media --large-viewport (min-width: 1025px);
+
+/* 使用自定义媒体查询 */
+@media (--small-viewport) {
+  .container {
+    background-color: lightblue;
+    padding: 10px;
+  }
+}
+
+@media (--medium-viewport) {
+  .container {
+    background-color: lightgreen;
+    padding: 15px;
+  }
+}
+
+@media (--large-viewport) {
+  .container {
+    background-color: lightcoral;
+    padding: 20px;
+  }
+}

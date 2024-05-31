@@ -10,6 +10,7 @@ import server from './assets/server.png'
 import locak2 from './assets/lock2.png'
 import SignIn from './signIn'
 import SignUp from './signUp'
+import { Button } from 'antd-mobile';
 const Login: React.FC = () => {
   //0 登录  1注册
   const [state, setState] = useState(0)
@@ -42,15 +43,7 @@ const Login: React.FC = () => {
       onClick: handleOpenServer
     }
   ]
-  // const handleLogin = () => {
-  //   // 模拟登录逻辑，实际项目中应该进行 API 请求验证用户身份
-  //   if (username === 'admin' && password === 'admin') {
-  //     localStorage.setItem('authToken', 'fakeToken'); // 模拟保存 token
-  //     navigate('/protected/home',{replace:true}); // 登录成功后重定向到主页
-  //   } else {
-  //     alert('用户名或密码错误');
-  //   }
-  // };
+
   return (
     <div className={styles.backGround}>
     <div className={styles.imageContainer}>
@@ -62,6 +55,7 @@ const Login: React.FC = () => {
           {state === 0 && <SignIn />}
           {state === 1 && <SignUp />}
     </div>
+
     <div className={styles.bottomWrap}>
           {bottoms.map((v, index) => {
             return (

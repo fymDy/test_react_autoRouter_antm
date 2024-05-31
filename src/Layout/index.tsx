@@ -1,7 +1,7 @@
 // src/components/Layout.jsx
 import { Link, Outlet } from "react-router-dom";
 import { getRouteLevel } from "../routes";
-
+import Styles from "./index.module.scss";
 const Layout = ({ route }: any) => {
   console.log('Layout---------route',route)
   return(
@@ -13,9 +13,8 @@ const Layout = ({ route }: any) => {
       <Outlet />
     </main>
     {  route?.routeLevel==2 &&
-       <footer>
-       <nav>
-         <ul>
+    
+         <ul className={Styles.footerBar}>
            <li>
              <Link to="/protected/home">Home</Link>
            </li>
@@ -26,8 +25,7 @@ const Layout = ({ route }: any) => {
              <Link to="/protected/dashboard">Dashboard</Link>
            </li>
          </ul>
-       </nav>
-     </footer>
+  
     }
 </div>
   )

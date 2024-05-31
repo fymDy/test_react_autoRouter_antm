@@ -7,7 +7,7 @@
   align-items: center;
   background: url("./assets/background.png") bottom no-repeat;
   background-size: cover;
-  padding: 20px 23px ;
+ 
   box-sizing: border-box;
   .imageContainer {
     cursor: inherit;
@@ -41,15 +41,17 @@
       }
     }
   }
+  .btnLogin,
   .entryMain{
     width: 100%;
   }
+
   .bottomWrap {
+    width: 100%;
+    margin-top: 50px;
     display: grid;
-    grid-template-columns: repeat(3,33.33%);
-    grid-gap: 20px;
-    width: calc(100% - 106px);
-    margin-top: 30px;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
     .bottomItem {
        
         height: 62px;
