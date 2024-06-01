@@ -1,20 +1,20 @@
 // src/components/Layout.jsx
 import { Link, Outlet } from "react-router-dom";
 import { getRouteLevel } from "../routes";
-import Styles from "./index.module.scss";
+import  "./index.scss";
 const Layout = ({ route }: any) => {
   console.log('Layout---------route',route)
   return(
-    <div className={Styles.layoutPage}>
+    <div className='layoutPage'>
       {/* <header>
         
       </header> */}
-    <main className={Styles.layoutMain}>
+    <main className='layoutMain'>
       <Outlet />
     </main>
     {  route?.routeLevel==2 &&
     
-         <ul className={Styles.footerBar}>
+         <ul className='footerBar'>
            <li>
              <Link to="/protected/home">Home</Link>
            </li>

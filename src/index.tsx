@@ -2,7 +2,7 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter  } from 'react-router-dom';
 import App from './App';
-import '@/styles/index.scss'; // 引入全局样式
+import  '@/styles/index.scss';
 const container = document.getElementById('root');
 const root = createRoot(container!);
 
