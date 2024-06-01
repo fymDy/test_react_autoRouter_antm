@@ -26,6 +26,10 @@ module.exports = {
       ],
     },
   },
+   // 配置开发服务器
+   devServer: {
+    port: 9001, // 你希望的端口号
+  },
   // 配置 Webpack
   webpack: {
     configure: (webpackConfig, { env, paths }) => {
@@ -60,7 +64,13 @@ module.exports = {
           },
         });
       }
-
+  // 修改输出文件名和输出目录
+  webpackConfig.output = {
+    ...webpackConfig.output,
+    path: path.resolve(__dirname, 'dist'), // 指定输出目录为 'dist'
+    filename: 'static/js/[name].[hash].bundle.js', // 指定主文件的输出格式，其中 [name] 是文件名，[hash] 是文件的哈希值。
+    chunkFilename: 'static/js/[name].[hash].chunk.js', // 指定 chunk 文件名格式
+  };
       return webpackConfig;
     },
   },
