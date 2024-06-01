@@ -8,7 +8,7 @@ const Dashboard: React.FC = () => {
       navigate('/protected/dashboard/settings');
     };
   return (
-    <div>
+    <div className='dashPage'>
       <h1 >Dashboard Page</h1>
       {/* 用于渲染子路由 */}
       <button onClick={goToSettings}>Go to Settings</button>

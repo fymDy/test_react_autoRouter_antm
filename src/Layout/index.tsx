@@ -5,11 +5,11 @@ import Styles from "./index.module.scss";
 const Layout = ({ route }: any) => {
   console.log('Layout---------route',route)
   return(
-    <div>
-      <header>
+    <div className={Styles.layoutPage}>
+      {/* <header>
         
-      </header>
-    <main>
+      </header> */}
+    <main className={Styles.layoutMain}>
       <Outlet />
     </main>
     {  route?.routeLevel==2 &&

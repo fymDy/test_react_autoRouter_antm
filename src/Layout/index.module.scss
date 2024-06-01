@@ -1,3 +1,8 @@
+.layoutPage{
+  height: 100%;
+  .layoutMain{
+    height: calc(100% - 50px) !important;
+}
 .footerBar {
   position: fixed;
   bottom: 0;
@@ -9,7 +14,9 @@
  display: flex ;
  flex-direction: row;
  justify-content: space-between;
+ background-color: antiquewhite;
  li{
   font-size: 26px !important;
  }
+}
 }

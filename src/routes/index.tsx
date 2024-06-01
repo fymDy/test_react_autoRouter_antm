@@ -4,7 +4,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import AuthGuard from "./AuthGuard"; // 引入 AuthGuard 组件
 import Layout from "../Layout"; // 引入布局组件
 // 动态导入组件的占位符
-const Loading = () => <div>Loading...</div>;
+const Loading = () => <div className="Loading">Loading...</div>;
 // 动态生成路由配置对象
 const requireContext = require.context("../pages", true, /index\.tsx$/);
 
