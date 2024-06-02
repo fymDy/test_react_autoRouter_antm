@@ -2,6 +2,7 @@
 import React from 'react';
 import { lazy, Suspense } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
+
 import AuthGuard from "./AuthGuard"; // 引入 AuthGuard 组件
 import Layout from "../Layout"; // 引入布局组件
 // 动态导入组件的占位符
@@ -22,7 +23,7 @@ export const getRouteLevel = (path: string) => {
 const routesConfig = requireContext.keys().map((key) => {
   const routePath = generateRoutePath(key);
   const routeLevel = getRouteLevel(routePath); // 分割路径并计算非空部分的数量
-  console.log(`Loading component for routePath: ${routePath},${routeLevel}`); // 打印调试信息
+  // console.log(`Loading component for routePath: ${routePath},${routeLevel}`); // 打印调试信息
   // 动态加载组件
   const Component = lazy(() =>
     import(`../pages/${routePath}/index.tsx`).then((module) => ({
@@ -37,7 +38,7 @@ const routesConfig = requireContext.keys().map((key) => {
     routeLevel: routeLevel,
   };
 });
-console.log("routesConfig======", routesConfig);
+
 // // 处理未匹配的路由
 const NotFound = lazy(() => import("../pages/404"));
 {

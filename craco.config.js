@@ -1,6 +1,14 @@
 // craco.config.js
 const path = require("path");
+const { ESLINT_MODES } = require('@craco/craco');
 const eslintConfig = require("./.eslintrc.js"); // 引入 ESLint 配置文件
+
+console.log('ESLINT_MODES:',ESLINT_MODES)
+/* 
+eslint 的 mode 选项用于配置 ESLint 的运行模式。CRACO 提供了三种模式
+1:file：这个模式表示使用 ESLint 的配置文件（例如 .eslintrc.js、 .eslintrc.json 等）来运行 ESLint。
+2:extends：这个模式表示直接在 craco.config.js 中定义 ESLint 配置，而不是使用外部的配置文件。
+3:extends-file：这个模式表示使用指定的配置文件，并在 craco.config.js 中追加或覆盖一些 ESLint 配置。 */
 module.exports = {
   devServer: {
     // 这里可以配置开发服务器选项
@@ -8,8 +16,9 @@ module.exports = {
   },
   // 其他Craco配置，可以根据需要添加
   eslint: {
-    enable: false, // 启用 ESLint
-    mode: "extends", // 使用 "extends" 模式
+    enable: true, // 启用 ESLint
+    // mode:  ESLINT_MODES.file, // 使用 "file" 模式来读取 .eslintrc.js 文件，extends：这个模式表示直接在 craco.config.js 中定义 ESLint 配置
+    mode:  'file',
     configure: () => eslintConfig, // 应用外部的 ESLint 配置
   },
   babel: {

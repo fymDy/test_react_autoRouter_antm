@@ -1,17 +1,18 @@
 /*
  * @Author: Mark
  * @Date: 2024-05-31 20:11:34
- * @LastEditTime: 2024-06-02 12:39:22
+ * @LastEditTime: 2024-06-02 17:28:59
  * @LastEditors: MarkMark
  * @Description: 佛祖保佑无bug
  * @FilePath: /test-react-app-antm/src/pages/Login/signIn/index.tsx
  */
 import React from 'react';
 import { Button, Form, Input } from 'antd-mobile'
+import { useNavigate } from 'react-router-dom'
+
 import styles from './index.module.scss'
 import accountPng from '../assets/account.png'
 import lockPng from '../assets/lock.png'
-import { useNavigate } from 'react-router-dom'
 const useSignIn = () => {
     const navigate = useNavigate()
     const handleLogin = (values: any) => {
@@ -34,13 +35,13 @@ const useSignIn = () => {
                     </Button>
                 }>
                 <Form.Item name='username' label={<div className={styles.iptAccount}>
-                    <div><img src={accountPng} /></div>
+                    <div><img src={accountPng} alt='' /></div>
                 </div>}>
                     <Input placeholder='请输入手机号' clearable />
                 </Form.Item>
                 <Form.Item name='password' label={
                     <div className={styles.iptAccount}>
-                        <div>   <img src={lockPng} /></div>
+                        <div>   <img src={lockPng} alt=''/></div>
                     </div>
                 }>
                     <Input placeholder='请输入密码' clearable />

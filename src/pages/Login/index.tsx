@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+
 import styles from './index.module.scss';
 import logoPng from './assets/logo.png'
 // import platform1 from './assets/platform1.png'

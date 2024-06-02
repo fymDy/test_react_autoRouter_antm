@@ -13,7 +13,7 @@ const useLayout = ({ route }: any) => {
     <main className='layoutMain'>
       <Outlet />
     </main>
-    {  route?.routeLevel==2 &&
+    {  route?.routeLevel===2 &&
     
          <ul className='footerBar'>
            <li>
