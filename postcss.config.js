@@ -21,10 +21,10 @@ module.exports = {
       fontViewportUnit: 'vw',
       selectorBlackList: ['ignore'],
       minPixelValue: 1,
-      mediaQuery: false,
+      mediaQuery: true,
       replace: true,
       exclude: [/node_modules/],
-      landscape: false
+      landscape: false//// 如果需要生成横屏模式的视口单位，将此项设置为 true
     })
   ]
 };

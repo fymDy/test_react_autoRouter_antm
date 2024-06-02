@@ -1,6 +1,6 @@
 import React from 'react';
 
-const About: React.FC = () => {
+const useAbout: React.FC = () => {
   return (
     <div className='aboutPage'>
       <h1>About Page</h1>
@@ -8,4 +8,4 @@ const About: React.FC = () => {
   );
 };
 
-export default About;
+export default useAbout;

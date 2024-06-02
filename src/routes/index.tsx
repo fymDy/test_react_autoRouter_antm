@@ -1,4 +1,5 @@
 // src/routes.tsx
+import React from 'react';
 import { lazy, Suspense } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import AuthGuard from "./AuthGuard"; // 引入 AuthGuard 组件

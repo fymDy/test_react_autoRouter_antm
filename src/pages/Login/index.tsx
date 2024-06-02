@@ -2,16 +2,15 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './index.module.scss';
 import logoPng from './assets/logo.png'
-import platform1 from './assets/platform1.png'
-import platform2 from './assets/platform2.png'
-import platform3 from './assets/platform3.png'
+// import platform1 from './assets/platform1.png'
+// import platform2 from './assets/platform2.png'
+// import platform3 from './assets/platform3.png'
 import avater from './assets/avatar.png'
 import server from './assets/server.png'
 import locak2 from './assets/lock2.png'
 import SignIn from './signIn'
 import SignUp from './signUp'
-import { Button } from 'antd-mobile';
-const Login: React.FC = () => {
+const useLogin: React.FC = () => {
   //0 登录  1注册
   const [state, setState] = useState(0)
   const navigate = useNavigate();
@@ -76,4 +75,4 @@ const Login: React.FC = () => {
   );
 };
 
-export default Login;
+export default useLogin;

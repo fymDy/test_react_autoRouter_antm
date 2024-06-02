@@ -1,14 +1,14 @@
 /*
  * @Author: Mark
  * @Date: 2024-05-30 18:08:59
- * @LastEditTime: 2024-05-31 14:57:26
+ * @LastEditTime: 2024-06-02 12:18:07
  * @LastEditors: MarkMark
  * @Description: 佛祖保佑无bug
- * @FilePath: /mobile/test-react-app-antm/src/pages/protected/Dashboard/Settings/index.tsx
+ * @FilePath: /test-react-app-antm/src/pages/protected/Dashboard/Settings/index.tsx
  */
 import React from 'react';
 
-const Settings: React.FC = () => {
+const useSettings: React.FC = () => {
   return (
     <div>
       <h1>Settings Page</h1>
@@ -16,4 +16,4 @@ const Settings: React.FC = () => {
   );
 };
 
-export default Settings;
+export default useSettings;

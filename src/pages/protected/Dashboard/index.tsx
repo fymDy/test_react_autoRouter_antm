@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link, Outlet, useNavigate } from 'react-router-dom';
+import {  useNavigate } from 'react-router-dom';
 
-const Dashboard: React.FC = () => {
+const useDashboard: React.FC = () => {
     const navigate = useNavigate();
 
     const goToSettings = () => {
@@ -16,4 +16,4 @@ const Dashboard: React.FC = () => {
   );
 };
 
-export default Dashboard;
+export default useDashboard;

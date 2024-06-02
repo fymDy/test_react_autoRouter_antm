@@ -1,0 +1,23 @@
+{
+    "version": "0.2.0", // 配置文件的版本号，当前支持的版本是 0.2.0。
+    "configurations": [
+      {//第一个配置项: "Launch Program"
+        "type": "node", // 指定调试器类型，这里是 Node.js 调试器。
+        "request": "launch", // 指定调试请求的类型，launch 表示启动一个新的调试会话。
+        "name": "Launch Program", // 调试配置的名称，用于在调试面板中区分不同的配置项。
+        "skipFiles": ["<node_internals>/**"], // 跳过指定的文件或文件夹，这里跳过 Node.js 内部模块文件。
+        "program": "${workspaceFolder}/src/index.tsx", // 要运行的程序入口文件路径。${workspaceFolder} 是当前工作空间的根目录，/src/index.js 是项目的入口文件路径。需要根据实际项目路径进行调整。
+        "console": "integratedTerminal", // 指定调试过程中使用的控制台，这里使用 VSCode 的集成终端（integratedTerminal）。
+        "internalConsoleOptions": "neverOpen" // 控制内部调试控制台的行为。neverOpen 表示不要打开内部调试控制台。
+      },
+      {//第二个配置项: "Run Script: start"
+        "type": "node-terminal", // 指定调试器类型，这里是 Node.js 终端调试器。
+        "name": "Run Script: start", // 调试配置的名称，用于在调试面板中区分不同的配置项。
+        "request": "launch", // 指定调试请求的类型，launch 表示启动一个新的调试会话。
+        "command": "npm start", // 要运行的命令，这里是 npm start，用于启动项目。
+        "cwd": "${workspaceFolder}", // 指定命令的工作目录，这里是工作空间的根目录 ${workspaceFolder}。
+        "console": "integratedTerminal" // 指定调试过程中使用的控制台，这里使用 VSCode 的集成终端（integratedTerminal）。
+      }
+    ]
+  }
+  

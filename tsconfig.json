@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "ES6",
     "lib": [
       "dom",
       "dom.iterable",
@@ -18,13 +18,13 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
+    "jsx": "react",
     "baseUrl": "./src",
     "paths": {
-      "@/*": ["*"]
+      "@/*": ["src/*"]
     },
     "types": ["node", "jest", "express", "serve-static"]
   },
-  "include": ["src", "src/typings/index.d.ts"],
+  "include": ["src/**/*", "src/typings/index.d.ts"],
   "exclude": ["node_modules", "dist"]
 }

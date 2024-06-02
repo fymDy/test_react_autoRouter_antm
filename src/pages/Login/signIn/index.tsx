@@ -1,17 +1,18 @@
 /*
  * @Author: Mark
  * @Date: 2024-05-31 20:11:34
- * @LastEditTime: 2024-05-31 21:27:21
+ * @LastEditTime: 2024-06-02 12:39:22
  * @LastEditors: MarkMark
  * @Description: 佛祖保佑无bug
- * @FilePath: /mobile/test-react-app-antm/src/pages/Login/signIn/index.tsx
+ * @FilePath: /test-react-app-antm/src/pages/Login/signIn/index.tsx
  */
+import React from 'react';
 import { Button, Form, Input } from 'antd-mobile'
 import styles from './index.module.scss'
 import accountPng from '../assets/account.png'
 import lockPng from '../assets/lock.png'
 import { useNavigate } from 'react-router-dom'
-const useSigin = () => {
+const useSignIn = () => {
     const navigate = useNavigate()
     const handleLogin = (values: any) => {
         // 模拟登录逻辑，实际项目中应该进行 API 请求验证用户身份
@@ -48,4 +49,4 @@ const useSigin = () => {
         </div>
     )
 }
-export default useSigin
+export default useSignIn

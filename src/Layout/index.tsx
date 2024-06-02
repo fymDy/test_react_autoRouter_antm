@@ -1,8 +1,9 @@
 // src/components/Layout.jsx
+import React from 'react';
 import { Link, Outlet } from "react-router-dom";
-import { getRouteLevel } from "../routes";
+// import { getRouteLevel } from "../routes";
 import  "./index.scss";
-const Layout = ({ route }: any) => {
+const useLayout = ({ route }: any) => {
   console.log('Layout---------route',route)
   return(
     <div className='layoutPage'>
@@ -31,5 +32,5 @@ const Layout = ({ route }: any) => {
   )
 };
 
-export default Layout;
+export default useLayout;
 
