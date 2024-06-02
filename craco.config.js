@@ -27,24 +27,6 @@ module.exports = {
             options: {
               postcssOptions: {
                 config: path.join(__dirname, 'postcss.config.js'),
-                // plugins: [
-                //   require('postcss-preset-env')({
-                //     stage: 0,
-                //     features: {
-                //       'nesting-rules': true,
-                //       'custom-media-queries': true,
-                //     },
-                //   }),
-                //   require('postcss-px-to-viewport')({
-                //     viewportWidth: 375,
-                //     viewportHeight: 667,
-                //     unitPrecision: 5,
-                //     viewportUnit: 'vw',
-                //     selectorBlackList: ['.ignore', '.hairlines'],
-                //     minPixelValue: 1,
-                //     mediaQuery: false,
-                //   }),
-                // ],
               },
             },
           });
