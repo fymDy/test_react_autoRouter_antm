@@ -12,7 +12,7 @@ module.exports = {
       },
       autoprefixer: { grid: true } // 如果需要，启用网格布局前缀
     }),
-    require('postcss-px-to-viewport')({
+    require('postcss-px-to-viewport-8-plugin')({
       unitToConvert: 'px',
       viewportWidth: 375,
       unitPrecision: 5,
